@@ -13,7 +13,8 @@ class MyComponent extends React.Component {
   render() {
     return (
       <div>
-        Study React
+        Study React with Erik
+        <div>hello</div>
         <div>
           My name is {this.state.name} and I am from {this.state.address}
         </div>
