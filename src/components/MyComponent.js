@@ -9,6 +9,8 @@ class MyComponent extends React.Component {
     address: "Thanh Hoa",
     age: 20,
   };
+
+  handleClick() {}
   // JSX
   render() {
     return (
@@ -17,6 +19,7 @@ class MyComponent extends React.Component {
         <div>hello</div>
         <div>
           My name is {this.state.name} and I am from {this.state.address}
+          <button onClick={this.handleClick}>Click me</button>
         </div>
       </div>
     );
