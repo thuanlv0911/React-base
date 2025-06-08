@@ -3,9 +3,14 @@ import "./DisplayInfor.scss";
 import logo from "./../logo.svg";
 
 class DisplayInfor extends React.Component {
-  state = {
-    isHandleShowHide: true,
-  };
+  constructor(props) {
+    console.log("constructor");
+
+    super(props);
+    this.state = {
+      isHandleShowHide: true,
+    };
+  }
 
   handleShowHide = () => {
     this.setState({
@@ -13,8 +18,24 @@ class DisplayInfor extends React.Component {
     });
   };
 
+  componentDidMount() {
+    console.log("did mount");
+    setTimeout(() => {
+      document.title = "Thuan";
+    }, 2000);
+  }
+
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    console.log("did update", this.props, prevProps);
+    if (this.props.listUsers !== prevProps.listUsers) {
+      if (this.props.listUsers.length === 5) {
+        alert("5");
+      }
+    }
+  }
+
   render() {
-    console.log(this.props);
+    console.log("render", this.props);
     // Destructuring object
     const { listUsers } = this.props;
     return (
