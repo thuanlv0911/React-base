@@ -35,11 +35,14 @@ class MyComponent extends React.Component {
 
   render() {
     return (
-      <div>
-        <AddUserInfor handleAddNewUser={this.handleAddNewUser}></AddUserInfor>
-        <hr />
-        <DisplayInfor listUsers={this.state.listUsers}></DisplayInfor>
-      </div>
+      <React.Fragment>
+        <div className="a">
+          <AddUserInfor handleAddNewUser={this.handleAddNewUser}></AddUserInfor>
+          <hr />
+          <DisplayInfor listUsers={this.state.listUsers}></DisplayInfor>
+        </div>
+        <div className="b"></div>
+      </React.Fragment>
     );
   }
 }
