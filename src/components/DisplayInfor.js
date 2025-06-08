@@ -36,6 +36,15 @@ class DisplayInfor extends React.Component {
                 <div key={user.id} className={+user.age > 18 ? "red" : "green"}>
                   <div style={{ color: "blue" }}>My name's {user.name}</div>
                   <div>My age's {user.age}</div>
+                  <div>
+                    <button
+                      onClick={() => {
+                        this.props.handleDeleteUser(user.id);
+                      }}
+                    >
+                      X
+                    </button>
+                  </div>
                   <hr />
                 </div>
               );
