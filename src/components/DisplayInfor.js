@@ -30,7 +30,7 @@ class DisplayInfor extends React.Component {
           </button>
         </div>
         {this.state.isHandleShowHide && (
-          <div>
+          <React.Fragment>
             {listUsers.map((user, index) => {
               return (
                 <div key={user.id} className={+user.age > 18 ? "red" : "green"}>
@@ -40,7 +40,7 @@ class DisplayInfor extends React.Component {
                 </div>
               );
             })}
-          </div>
+          </React.Fragment>
         )}
       </div>
     );
