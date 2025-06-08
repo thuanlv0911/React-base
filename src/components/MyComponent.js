@@ -34,8 +34,10 @@ class MyComponent extends React.Component {
   };
 
   render() {
+    const test = "Hello world with React";
     return (
       <React.Fragment>
+        {test}
         <div className="a">
           <AddUserInfor handleAddNewUser={this.handleAddNewUser}></AddUserInfor>
           <hr />
