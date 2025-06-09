@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./DisplayInfor.scss";
 import logo from "./../logo.svg";
 
@@ -111,9 +111,20 @@ import logo from "./../logo.svg";
 const DisplayInfor = (props) => {
   const { listUsers } = props;
 
+  const [isHandleShowHide, setHandleShowHide] = useState(true);
+
+  const handleShowHide = () => {
+    setHandleShowHide(!isHandleShowHide);
+  };
+
   return (
     <div className="display-infor-container">
-      {true && (
+      <div>
+        <button onClick={() => handleShowHide()}>
+          {isHandleShowHide === true ? "Hide" : "Show"}
+        </button>
+      </div>
+      {isHandleShowHide && (
         <React.Fragment>
           {listUsers.map((user, index) => {
             return (
