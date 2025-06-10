@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./DisplayInfor.scss";
-import logo from "./../logo.svg";
+// import logo from "./../logo.svg";
 
 // class DisplayInfor extends React.Component {
 //   // constructor(props) {
@@ -116,6 +116,17 @@ const DisplayInfor = (props) => {
   const handleShowHide = () => {
     setHandleShowHide(!isHandleShowHide);
   };
+  console.log("render");
+
+  useEffect(() => {
+    setTimeout(() => {
+      document.title = "Thuan";
+    }, 2000);
+    if (listUsers.length === 0) {
+      alert("me");
+    }
+    console.log("Effect");
+  }, [listUsers]);
 
   return (
     <div className="display-infor-container">
