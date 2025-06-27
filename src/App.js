@@ -11,7 +11,7 @@ const App = () => {
         <Header />
       </div>
       <div className="main-container">
-        <div className="sidenav-container">
+        <div className="sidenav-container" xs={3}>
           <div>
             Test
             <div>
@@ -24,7 +24,7 @@ const App = () => {
             </div>
           </div>
         </div>
-        <div className="app-content">
+        <div className="app-content" xs={9}>
           <Outlet />
         </div>
       </div>
