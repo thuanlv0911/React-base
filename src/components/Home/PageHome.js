@@ -1,18 +1,11 @@
-import { Link } from "react-router-dom";
-import { Button } from "react-bootstrap";
+import videoPageHome from "../../assets/Fsoft2023.mp4";
 
 const PageHome = () => {
   return (
-    <div>
-      Test
-      <div>
-        <Button className="btn btn-warning">
-          <Link to="/user">Go to the user page</Link>
-        </Button>
-        <Button className="btn btn-warning">
-          <Link to="/admin">Go to the admin page</Link>
-        </Button>
-      </div>
+    <div className="homepage-container">
+      <video autoPlay muted loop controls>
+        <source src={videoPageHome} type="video/mp4" />
+      </video>
     </div>
   );
 };
