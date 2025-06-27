@@ -2,7 +2,7 @@ import "./App.scss";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./components/Header/Header";
-import { Link, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
 const App = () => {
   return (
@@ -11,19 +11,7 @@ const App = () => {
         <Header />
       </div>
       <div className="main-container">
-        <div className="sidenav-container" xs={3}>
-          <div>
-            Test
-            <div>
-              <button>
-                <Link to="/user">Go to user page</Link>
-              </button>
-              <button>
-                <Link to="/admin">Go to admin page</Link>
-              </button>
-            </div>
-          </div>
-        </div>
+        <div className="sidenav-container" xs={3}></div>
         <div className="app-content" xs={9}>
           <Outlet />
         </div>
