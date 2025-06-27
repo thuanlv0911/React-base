@@ -6,6 +6,7 @@ import "./App.scss";
 // import MyComponent from "./components/MyComponent";
 // import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Header from "./components/Header";
 
 // class App extends React.Component {
 //   render() {
@@ -24,7 +25,7 @@ const App = () => {
 
   return (
     <div className="app-container">
-      <h1>Hello</h1>
+      <Header />
     </div>
   );
 };
