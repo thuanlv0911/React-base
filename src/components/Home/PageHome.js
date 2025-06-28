@@ -1,4 +1,4 @@
-import videoPageHome from "../../assets/Fsoft2023.mp4";
+import videoPageHome from "../../assets/StoreStock.mp4";
 
 const PageHome = () => {
   return (
